@@ -1,0 +1,8 @@
+clean: fvm flutter clean
+run_dev: fvm flutter run --debug
+gen:
+  - fvm flutter pub run build_runner build --delete-conflicting-outputs
+clean_build_ios:
+  - fvm flutter clean
+  - fvm flutter pub get
+  - fvm flutter build ios
